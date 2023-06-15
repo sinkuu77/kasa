@@ -1,0 +1,23 @@
+@use "base";
+
+.header {
+    color: base.$point-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 3rem;
+        li {
+            &.active {
+                border-bottom: 1px solid base.$point-color;
+            }
+            a {
+                text-decoration: none;
+                color: base.$point-color;
+            }
+        }
+        
+    }
+}

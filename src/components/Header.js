@@ -3,13 +3,15 @@ import styles from "../styles/Header.module.scss"
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
 
 export default function Header() {
-    return <nav className={styles.header}>
-        <img src={logo} alt='header logo'></img>
+    return <header>
+    <nav className={styles.header}>
+        <img src={logo} alt='header logo' />
         <ul>
             <ClikedLink to="/accueil">Accueil</ClikedLink>
             <ClikedLink to="/apropos">A Propos</ClikedLink>
         </ul>
     </nav>
+    </header>
 }
 
 function ClikedLink({ to , children, ...props}) {

@@ -1,0 +1,13 @@
+@use "base";
+
+.section {
+    width: 100%;
+    height: 829px;
+    padding: 40px 0;
+    div {
+        background: base.$background-color;
+        border-radius: 25px;
+        width: 100%;
+        height: 100%;
+    }
+}

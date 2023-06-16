@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com");
 
 $point-color: #FF6060;
+$background-color: #F6F6F6;
 $black-color: #000000;
 $white-color: #ffffff;
-$base-padding: 3rem 6rem;
+$base-padding: 45px 100px;
 
 * {
     box-sizing: border-box;
@@ -12,4 +13,8 @@ $base-padding: 3rem 6rem;
 body {
     margin: 0 auto;
     font-family: Montserrat, sans-serif;
+}
+
+.home__container {
+    padding: 10px 100px 50px;
 }

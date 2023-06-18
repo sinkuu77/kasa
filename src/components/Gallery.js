@@ -13,8 +13,8 @@ export default function Gallery() {
         .then((response) => response.json())
         .then((data) => setLogements(data))
     }
-    return <section className={styles.section}>
-        <div>
+    return <section className={styles.gallery}>
+        <div className={styles.gallery__container}>
             <ul>
             {logements.map((logement) => (
                 <ThumbCards 

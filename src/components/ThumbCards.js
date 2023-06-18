@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom"
-import styles from "../styles/ThumbCards.module.scss"
+import  styles from "../styles/ThumbCards.module.scss"
 
 export default function ThumbCards({ id, title, cover }) {
         return (
-            <Link to="/">
+            <Link to="/" className={styles.thumbCards}>
                 <li key={id}>
-                    <img src={cover} alt={`${title} cover`}/>
-                    <div style={styles.thumb__title}>
+                    <div className={styles.thumbCards__container}>
+                        <img src={cover} alt={`${title} cover`}/>
                         <h2>{title}</h2>
                     </div>
                 </li>

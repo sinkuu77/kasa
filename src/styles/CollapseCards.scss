@@ -1,0 +1,56 @@
+@use "base";
+
+.collapse {
+    list-style: none;
+    &__container {
+        background-color: base.$point-color;
+        color: base.$white-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 5px;
+        padding: 0 20px;
+        margin: 30px 100px 0;
+        h2 {
+            font-size: 24px;
+            font-weight: 500;
+        }
+        img {
+            transition: all 0.3s linear;
+            &:hover {
+                cursor: pointer;
+            }
+            &.active {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+    &__content {
+        height: 0;
+        overflow: hidden;
+        background-color: base.$background-color;
+        border-radius: 5px;
+        margin: 0 100px;
+        padding: 0 50px;
+        transition: all 0.3s linear;
+        p {
+            color: base.$point-color;
+        }
+    }
+    &__opened {
+        background-color: base.$background-color;
+        border-radius: 5px;
+        margin: 0 100px;
+        padding: 20px 50px 20px;
+        transition: all 0.3s linear;
+        p {
+            color: base.$point-color;
+            margin: 0;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 140%;
+        }
+    }
+}
+
+

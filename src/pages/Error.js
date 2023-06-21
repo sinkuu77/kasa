@@ -1,7 +1,9 @@
+import ErrorMessage from '../components/ErrorMessage';
+
 export default function Error() {
     return (
         <div>
-            <h1>Cette page n'existe pas</h1>
+            <ErrorMessage />
         </div>
     )
 }

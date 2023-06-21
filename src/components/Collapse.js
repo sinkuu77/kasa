@@ -1,18 +1,23 @@
-import { CollapseData } from "../datas/CollapseData"
-import CollapseCards from './CollapseCards'
-import styles from "../styles/Collapse.module.scss"
+import Icon from "../assets/ICON-arrow.png"
+import {useState} from "react"
+import "../styles/Collapse.scss"
 
 
-export default function Collapse() {
+export default function Collapse({index, value, children}) {
+    const [rotate, setRotate] = useState(false)
+    const onRotate = () => {
+        setRotate((current) => !current)
+    }
+
     return (
-        <ul className={styles.collapse__list}>
-            {CollapseData.map(({ index, value, content }) => (
-                <CollapseCards 
-                    key={`${value}-${index}`}
-                    value={value}
-                    content={content}
-                />
-            ))}
-        </ul>
+        <div key={index} className="collapse">
+            <div className="collapse__container">
+                <h2>{value}</h2>
+                <img src={Icon} alt='arrow icon' className={rotate ? "active" : ""} onClick={onRotate}/>
+            </div>
+            <div className={rotate? "collapse__opened" : "collapse__content"}>
+                {children}
+            </div>
+        </div>
     )
 }

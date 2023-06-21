@@ -3,7 +3,7 @@ import  styles from "../styles/ThumbCards.module.scss"
 
 export default function ThumbCards({ id, title, cover }) {
         return (
-            <Link to="/" className={styles.thumbCards}>
+            <Link to={`/logement/${id}`} className={styles.thumbCards}>
                 <li key={id}>
                     <div className={styles.thumbCards__container}>
                         <img src={cover} alt={`${title} cover`}/>

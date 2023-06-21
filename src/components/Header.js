@@ -7,12 +7,13 @@ export default function Header() {
     <nav className={styles.header}>
         <img src={logo} alt='header logo' />
         <ul>
-            <ClikedLink to="/accueil">Accueil</ClikedLink>
+            <ClikedLink to="/">Accueil</ClikedLink>
             <ClikedLink to="/apropos">A Propos</ClikedLink>
         </ul>
     </nav>
     </header>
 }
+
 
 function ClikedLink({ to , children, ...props}) {
     const resolvedPath = useResolvedPath(to)

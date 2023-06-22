@@ -1,0 +1,30 @@
+@use "base";
+
+.carrousel {
+    position: relative;
+    &__background {
+        border-radius: 15px;
+        width: 100%;
+        height: 415px;
+        object-fit: cover;
+    }
+    &__left {
+        position: absolute;
+        top: 40%;
+        left: 0;
+    }
+    &__right {
+        position: absolute;
+        top: 40%;
+        right: 0px;
+    }
+    p {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 18px;
+        color: base.$white-color;
+    }
+}

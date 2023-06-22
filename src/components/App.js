@@ -7,6 +7,8 @@ import Apropos from "../pages/Apropos"
 import Logement from "../pages/Logement"
 import Error from "../pages/Error"
 
+
+
 function App() {
   return (
   <div>
@@ -14,7 +16,7 @@ function App() {
   <Routes>
     <Route path='/' element={<Home />}/>
     <Route path='/apropos' element={<Apropos />}/>
-    <Route path='/logement/:id' element={<Logement />}/>
+    <Route path='/logement/:id' element={<Logement />} />
     <Route path='*' element={<Error />}/>
   </Routes>
   <Footer />

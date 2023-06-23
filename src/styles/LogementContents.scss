@@ -1,2 +1,15 @@
 @use "base";
 
+.contents {
+    &__title {
+        font-size: 36px;
+        font-weight: 500;
+        color: base.$point-color;
+        margin-bottom: 0;
+    }
+    &__location {
+        font-size: 18px;
+        font-weight: 500;
+        color: base.$point-color;
+    }
+}

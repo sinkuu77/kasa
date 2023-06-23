@@ -4,10 +4,9 @@ import arrowLeft from "../assets/arrow_left.png"
 import arrowRight from "../assets/arrow_right.png"
 
 
-export default function Carrousel({pictures}) {
+export default function Carrousel({pictures, totalSlide}) {
     const [slide, setSlide] = useState(0)
     const [currentSlide, setCurrentSlide] = useState(1)
-    const [totalSlide, setTotalSlide] = useState()
     return(
         <div className='carrousel'>
             <img src={pictures} alt="Slider" className='carrousel__background'/>

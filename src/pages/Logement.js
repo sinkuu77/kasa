@@ -5,29 +5,40 @@ import Carrousel from "../components/Carrousel"
 import Collapse from '../components/Collapse'
 
 export default function Logement() {
-    
     const [logements, setLogements] = useState([])
     const { id } = useParams()
     const navigate = useNavigate()
-    
+
     useEffect(() => {
         fetch("../logementData.json")
         .then((response) => response.json())
-        .then((data) => {data.find((logement) => String(logement.id) === id) ? 
-        setLogements(data.find((logement) => String(logement.id))) : 
-        navigate("/logement-non-trouver")})
-    }, [id])
+        .then((data) => {setLogements(data.find(logement => String(logement.id) === id))})
+        .catch((error) => {
+            navigate("/logement-non-trouver")
+        })
+    }, [id, navigate])
+
 
     return (
         <div className='logement__container'>
-        <Carrousel key={logements.id} pictures={logements.pictures[0]} />
+        <Carrousel 
+            key={id} 
+            pictures={logements.cover}
+            // totalSlide={logements.pictures.length}
+            />
         <LogementContents 
             title={logements.title}
+            location={logements.location}
             rating={logements.rating}
+            // hostName={logements.host.name}
+            // hostPic={logements.host.picture}
         />
         <Collapse
             value="Description"
-        >{logements.description}</Collapse>
+        ><p>{logements.description}</p></Collapse>
+        <Collapse
+            value="Équipements"
+        ><ul>{logements.equipments}</ul></Collapse>
         </div>
     )
 }

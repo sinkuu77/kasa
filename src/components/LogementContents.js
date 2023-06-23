@@ -1,22 +1,22 @@
 import "../styles/LogementContents.scss"
 
 
-export default function LogementContents({ title, location, tags, host, rating}) {
+export default function LogementContents({id, title, location, rating, hostName, hostPic}) {
     return (
+        <div className='contents'>
         <div>
-        <div>
-            <h1>{title}</h1>
-            <h2>{location}</h2>
+            <h1 className='contents__title'>{title}</h1>
+            <h2 className='contents__location'>{location}</h2>
             <ul>
-                <li>{tags}</li>
+                <li key={id}></li>
             </ul>
         </div>
         <div>
             <div>
-                <p>{host}</p>
-                <img src={host} alt='The face of a host' />
+                <p>{hostName}</p>
+                <img src={hostPic} alt='The face of a host' />
             </div>
-            {rating}
+            <p>{rating}</p>
         </div>
         </div>
     )

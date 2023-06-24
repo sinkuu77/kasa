@@ -12,4 +12,20 @@
         font-weight: 500;
         color: base.$point-color;
     }
+    &__host {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        &--name {
+            font-size: 18px;
+            font-weight: 500;
+            color: base.$point-color;
+        }
+        &--img {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+    }
 }

@@ -33,7 +33,7 @@
         margin: 0 100px;
         padding: 0 50px;
         transition: all 0.3s linear;
-        p {
+        p,li {
             color: base.$point-color;
         }
     }
@@ -43,13 +43,20 @@
         margin: 0 100px;
         padding: 20px 50px 20px;
         transition: all 0.3s linear;
-        p {
+        p, li {
             color: base.$point-color;
             margin: 0;
             font-size: 18px;
             font-weight: 500;
             line-height: 140%;
         }
+        ul {
+            padding-left: 0;
+            li {
+                list-style: none;
+            }
+        }
+        
     }
 }
 

@@ -1,16 +1,17 @@
 import "../styles/LogementContents.scss"
 
 
-export default function LogementContents({id, title, location, rating, hostName, hostPic}) {
-    const locationTxt = location.split("-")
-    const hostTxt = hostName.split(" ")
+export default function LogementContents({id, title, location, tags, rating, hostName, hostPic}) {
+    const locationTxt = location ? location.split("-") : []
+    const hostTxt = hostName ? hostName.split(" ") : []
     return (
         <div className='contents'>
+
         <div>
             <h1 className='contents__title'>{title}</h1>
-            {<h2 className='contents__location'>{`${locationTxt[1]}, ${locationTxt[0]}`}</h2> }
-            <ul>
-                <li key={id}></li>
+            <h2 className='contents__location'>{`${locationTxt[1]}, ${locationTxt[0]}`}</h2>
+            <ul className='contents__tag'>
+                {tags? tags.map((tag) => <li className='contents__tag--list' key={`${tag}-${id}`}>{tag}</li>) : ""}
             </ul>
         </div>
         <div>

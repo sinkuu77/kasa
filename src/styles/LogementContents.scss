@@ -12,6 +12,22 @@
         font-weight: 500;
         color: base.$point-color;
     }
+    &__tag {
+        display: flex;
+        gap: 8px;
+        &--list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        font-size: 14px;
+        height: 25px;
+        color: base.$white-color;
+        background-color: base.$point-color;
+        border-radius: 10px;
+        padding: 0 32px;
+        }
+    }
     &__host {
         display: flex;
         gap: 8px;

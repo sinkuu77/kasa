@@ -28,23 +28,24 @@ export default function Logement() {
     return (
         <div className='logement__container'>
         <Carrousel 
-            key={id} 
             pictures={logements.cover}
-            totalSlide={logements.pictures.length}
+            totalSlide={logements.pictures ? logements.pictures.length : ""}
             />
         <LogementContents 
+            id={logements.id}
             title={logements.title}
             location={logements.location}
-            rating={logements.rating}
-            hostName={logements.host.name}
-            hostPic={logements.host.picture}
+            tags={logements.tags}
+            //rating={logements.rating ? [...Array(+logements.rating)].map((star) => <img key={`${id}-${star}`}src={starActive} alt='pink star'/>) : ""}
+            hostName={logements.host ? logements.host.name : ""}
+            hostPic={logements.host ? logements.host.picture : ""}
         />
         <Collapse
             value="Description"
         ><p>{logements.description}</p></Collapse>
         <Collapse
             value="Équipements"
-        ><ul>{logements.equipments}</ul></Collapse>
+        ><ul>{logements.equipments ? logements.equipments.map((equipment) => <li key={`${equipment}-${id}`}>{equipment}</li>) : ""}</ul></Collapse>
         </div>
     )
 }

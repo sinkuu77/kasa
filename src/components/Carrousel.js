@@ -10,9 +10,13 @@ export default function Carrousel({pictures, totalSlide}) {
     return(
         <div className='carrousel'>
             <img src={pictures} alt="Slider" className='carrousel__background'/>
-            <img src={arrowLeft} alt="arrow-left" className='carrousel__left'/>
-            <img src={arrowRight} alt="arrow-right" className='carrousel__right'/>
-            <p>{`${currentSlide}/${totalSlide}`}</p>
+            {totalSlide !== 1 ? 
+            <div>
+                <img src={arrowLeft} alt="arrow-left" className='carrousel__left'/>
+                <img src={arrowRight} alt="arrow-right" className='carrousel__right'/>
+                <p>{`${currentSlide}/${totalSlide}`}</p>
+            </div> 
+            : ""}
         </div>
     )
 }

@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import LogementContents from '../components/LogementContents'
 import Carrousel from "../components/Carrousel"
 import Collapse from '../components/Collapse'
+import styles from "../styles/Logement.module.scss"
 
 export default function Logement() {
     const [logements, setLogements] = useState([])
@@ -24,7 +25,7 @@ export default function Logement() {
 
 
     return (
-        <div className='logement__container'>
+        <div className={styles.logement__container}>
         <Carrousel 
             pictures={logements.cover}
             totalSlide={logements.pictures ? logements.pictures.length : ""}
@@ -38,12 +39,20 @@ export default function Logement() {
             hostName={logements.host ? logements.host.name : ""}
             hostPic={logements.host ? logements.host.picture : ""}
         />
-        <Collapse
-            value="Description"
-        ><p>{logements.description}</p></Collapse>
-        <Collapse
-            value="Équipements"
-        ><ul>{logements.equipments ? logements.equipments.map((equipment) => <li key={`${equipment}-${id}`}>{equipment}</li>) : ""}</ul></Collapse>
+        <div className={styles.collapse}>
+            <Collapse
+                className={styles.collapse__description}
+                value="Description"
+            ><p>{logements.description}</p></Collapse>
+            <Collapse
+                className={styles.collapse__equipements}
+                value="Équipements"
+            ><ul>{logements.equipments ? 
+            logements.equipments.map((equipment) => <li key={`${equipment}-${id}`}>{equipment}</li>)
+            : ""}
+            </ul>
+            </Collapse>
+        </div>
         </div>
     )
 }

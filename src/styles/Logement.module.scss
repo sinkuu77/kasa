@@ -1,0 +1,16 @@
+@use "base";
+
+.logement__container {
+    padding: 10px 100px 50px;
+    .collapse {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        margin: 0;
+        
+    }
+}
+
+.Collapse_collapse__container__wsdow {
+    margin: 0;
+}

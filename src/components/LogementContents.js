@@ -1,9 +1,12 @@
 import "../styles/LogementContents.scss"
+import starActive from "../assets/star-active 1.png"
+import starInactive from "../assets/star-inactive 1.png"
 
 
 export default function LogementContents({id, title, location, tags, rating, hostName, hostPic}) {
     const locationTxt = location ? location.split("-") : []
     const hostTxt = hostName ? hostName.split(" ") : []
+    const ratingToNumber = rating ? Number(rating) : 0
     return (
         <div className='contents'>
 
@@ -19,7 +22,12 @@ export default function LogementContents({id, title, location, tags, rating, hos
                 {<p className='contents__host--name'>{hostTxt[0]}<br />{hostTxt[1]}</p>}
                 <img className='contents__host--img' src={hostPic} alt='The face of a host' />
             </div>
-            <p>{rating}</p>
+            {rating ?
+                [...Array(ratingToNumber)].map((star, index) => <img key={`${index}-${star}`}src={starActive} alt='active star'/>)
+                : ""}
+            {rating ?
+                [...Array(5 - ratingToNumber)].map((star, index) => <img key={`${index}-${star}`}src={starInactive} alt='inactive star'/>)
+                : ""}
         </div>
         </div>
     )

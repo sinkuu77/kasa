@@ -1,7 +1,5 @@
 import { useNavigate, useParams} from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import starActive from "../assets/star-active 1.png"
-import starInactive from "../assets/star-inactive 1.png"
 import LogementContents from '../components/LogementContents'
 import Carrousel from "../components/Carrousel"
 import Collapse from '../components/Collapse'
@@ -36,7 +34,7 @@ export default function Logement() {
             title={logements.title}
             location={logements.location}
             tags={logements.tags}
-            //rating={logements.rating ? [...Array(+logements.rating)].map((star) => <img key={`${id}-${star}`}src={starActive} alt='pink star'/>) : ""}
+            rating={logements.rating}
             hostName={logements.host ? logements.host.name : ""}
             hostPic={logements.host ? logements.host.picture : ""}
         />

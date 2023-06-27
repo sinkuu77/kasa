@@ -27,7 +27,7 @@ export default function Logement() {
     return (
         <div className={styles.logement__container}>
         <Carrousel 
-            pictures={logements.cover}
+            pictures={logements.pictures}
             totalSlide={logements.pictures ? logements.pictures.length : ""}
             />
         <LogementContents 

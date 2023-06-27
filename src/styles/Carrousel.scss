@@ -2,21 +2,34 @@
 
 .carrousel {
     position: relative;
-    &__background {
-        border-radius: 15px;
-        width: 100%;
-        height: 415px;
-        object-fit: cover;
+    &__container {
+        opacity: 0.3;
+        transition: all 1s ease-in-out;
+        &.active {
+            opacity: 1;
+        }
+        &--background {
+            border-radius: 15px;
+            width: 100%;
+            height: 415px;
+            object-fit: cover;
     }
+}
     &__left {
         position: absolute;
         top: 40%;
         left: 0;
+        &:hover {
+            cursor: pointer;
+        }
     }
     &__right {
         position: absolute;
         top: 40%;
         right: 0px;
+        &:hover {
+            cursor: pointer;
+        }
     }
     p {
         position: absolute;

@@ -21,7 +21,7 @@
         }
             h1 {
                 position: absolute;
-                font-size: 3rem;
+                font-size: 48px;
                 font-weight: 500;
                 color: base.$white-color;
                 top: 40%;
@@ -31,4 +31,18 @@
                 margin: 0 auto;
             }
 }    
+    @media (max-width: 768px) {
+        div {
+            height: 140px;
+            img {
+                height: 140px;
+            }
+            h1 {
+                font-size: 24px;
+                text-align: start;
+                top: 30%;
+                padding-left: 16px;
+            }
+        }
+    }
 }

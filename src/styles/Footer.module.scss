@@ -22,4 +22,16 @@
             margin: 0;
         }
     }
+    @media (max-width: 768px) {
+        &__container {
+            padding-top: 48px;
+            gap: 14px;
+            h3 {
+                font-size: 12px;
+                width: 133px;
+                text-align: center;
+                padding-bottom: 48px;
+            }
+        }
+    }
 }

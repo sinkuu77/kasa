@@ -26,4 +26,11 @@
             left: 20px;
         }
     }
+    @media (max-width: 768px) {
+        &__container {
+            img {
+                height: 255px;
+            }
+        }
+    }
 }

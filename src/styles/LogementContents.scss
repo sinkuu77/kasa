@@ -50,4 +50,34 @@
             overflow: hidden;
         }
     }
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+        &__title {
+            font-size: 18px;
+        }
+        &__location {
+            font-size: 14px;
+        }
+        &__tag {
+            &--list {
+                font-size: 10px;
+            }
+        }
+        &__rating {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            .contents__host {
+                &--name {
+                    font-size: 12px;
+                }
+                &--img {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+    }
 }

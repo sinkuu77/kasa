@@ -18,16 +18,20 @@ export default function LogementContents({id, title, location, tags, rating, hos
             </ul>
         </div>
         <div>
+            <div className='contents__rating'>
             <div className='contents__host'>
                 {<p className='contents__host--name'>{hostTxt[0]}<br />{hostTxt[1]}</p>}
                 <img className='contents__host--img' src={hostPic} alt='The face of a host' />
             </div>
-            {rating ?
-                [...Array(ratingToNumber)].map((star, index) => <img key={`${index}-${star}`}src={starActive} alt='active star'/>)
-                : ""}
-            {rating ?
-                [...Array(5 - ratingToNumber)].map((star, index) => <img key={`${index}-${star}`}src={starInactive} alt='inactive star'/>)
-                : ""}
+            <div>
+                {rating ?
+                    [...Array(ratingToNumber)].map((star, index) => <img key={`${index}-${star}`}src={starActive} alt='active star'/>)
+                    : ""}
+                {rating ?
+                    [...Array(5 - ratingToNumber)].map((star, index) => <img key={`${index}-${star}`}src={starInactive} alt='inactive star'/>)
+                    : ""}
+            </div>
+            </div>
         </div>
         </div>
     )

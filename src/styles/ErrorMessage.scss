@@ -22,4 +22,29 @@
         margin-bottom: 139px;
         color: base.$point-color;
     }
+    @media (max-width: 1024px) {
+        h1 {
+            font-size: 216px;
+            margin: 32px 0;
+        }
+        h2 {
+            font-size: 24px;
+        }
+    }
+    @media (max-width: 768px) {
+        padding: 16px;
+        gap: 88px;
+        h1 {
+            font-size: 96px;
+            margin: 80px 0 0; 
+        }
+        h2 {
+            font-size: 18px;
+            width: 260px;
+            text-align: center;
+        }
+        &--link {
+            font-size: 14px;
+        }
+    }
 }

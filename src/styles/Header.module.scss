@@ -22,4 +22,22 @@
         }
         
     }
+    @media (max-width: 768px) {
+        width: 100%;
+        padding: 16px;
+        gap: 24px;
+        img {
+            width: 145px;
+            height: 46px;
+        }
+        ul {
+            padding: 0;
+            gap: 32px;
+            li {
+                a {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
 }

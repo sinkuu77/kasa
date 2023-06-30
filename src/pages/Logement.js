@@ -21,6 +21,7 @@ export default function Logement() {
           navigate('/logement-non-trouver')
         }
       })
+      .catch((error) => console.error(error))
   }, [id, navigate])
 
   return (
@@ -39,10 +40,10 @@ export default function Logement() {
         hostPic={logements.host ? logements.host.picture : ''}
       />
       <div className={styles.collapse}>
-        <Collapse className={styles.collapse__description} value="Description">
+        <Collapse value="Description">
           <p>{logements.description}</p>
         </Collapse>
-        <Collapse className={styles.collapse__equipements} value="Équipements">
+        <Collapse value="Équipements">
           <ul>
             {logements.equipments
               ? logements.equipments.map((equipment) => (

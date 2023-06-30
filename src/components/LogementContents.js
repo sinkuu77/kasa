@@ -16,10 +16,10 @@ export default function LogementContents({
   const ratingToNumber = rating ? Number(rating) : 0
   return (
     <div className="contents">
-      <div>
-        <h1 className="contents__title">{title}</h1>
-        <h2 className="contents__location">{`${locationTxt[1]}, ${locationTxt[0]}`}</h2>
-        <ul className="contents__tag">
+      <div className="contents__container">
+        <h1 className="contents__container--title">{title}</h1>
+        <h2 className="contents__container--location">{`${locationTxt[1]}, ${locationTxt[0]}`}</h2>
+        <ul className="contents__container--tag">
           {tags
             ? tags.map((tag) => (
                 <li className="contents__tag--list" key={`${tag}-${id}`}>
@@ -45,7 +45,7 @@ export default function LogementContents({
               alt="The face of a host"
             />
           </div>
-          <div>
+          <div className="contents__rating--star">
             {rating
               ? [...Array(ratingToNumber)].map((star, index) => (
                   <img

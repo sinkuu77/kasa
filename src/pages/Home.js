@@ -11,6 +11,10 @@ export default function Home() {
           <img src={BannerImg} alt="mountain" />
         </div>
         <h1>Chez vous, partout et ailleurs</h1>
+        <p>
+          Chez vous,
+          <br /> partout et ailleurs
+        </p>
       </Banner>
       <Gallery />
     </div>

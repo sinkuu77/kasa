@@ -1,85 +1,85 @@
-@use "base";
-
+@use 'base';
 
 .collapse {
+  &__container {
+    background-color: base.$point-color;
+    color: base.$white-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding: 0 20px;
+    margin: 30px 100px 0;
+    h2 {
+      font-size: 24px;
+      font-weight: 500;
+    }
+    img {
+      transition: all 0.3s linear;
+      &:hover {
+        cursor: pointer;
+      }
+      &.active {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+  &__content {
+    height: 0;
+    overflow: hidden;
+    background-color: base.$background-color;
+    border-radius: 5px;
+    margin: 0 100px;
+    padding: 0 50px;
+    transition: all 0.3s linear;
+    p,
+    li {
+      color: base.$point-color;
+    }
+  }
+  &__opened {
+    background-color: base.$background-color;
+    border-radius: 5px;
+    margin: 0 100px;
+    padding: 20px 50px 20px;
+    transition: all 0.3s linear;
+    p,
+    li {
+      color: base.$point-color;
+      margin: 0;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 140%;
+    }
+    ul {
+      padding-left: 0;
+      li {
+        list-style: none;
+      }
+    }
+  }
+  @media (max-width: 768px) {
     &__container {
-        background-color: base.$point-color;
-        color: base.$white-color;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 5px;
-        padding: 0 20px;
-        margin: 30px 100px 0;
-        h2 {
-            font-size: 24px;
-            font-weight: 500;
-        }
-        img {
-            transition: all 0.3s linear;
-            &:hover {
-                cursor: pointer;
-            }
-            &.active {
-                transform: rotate(-180deg);
-            }
-        }
+      margin: 32px 0 0;
+      padding: 0 10px;
+      h2 {
+        font-size: 12px;
+      }
+      img {
+        width: 15px;
+      }
     }
     &__content {
-        height: 0;
-        overflow: hidden;
-        background-color: base.$background-color;
-        border-radius: 5px;
-        margin: 0 100px;
-        padding: 0 50px;
-        transition: all 0.3s linear;
-        p,li {
-            color: base.$point-color;
-        }
+      margin: 0;
+      padding: 0 20px;
     }
     &__opened {
-        background-color: base.$background-color;
-        border-radius: 5px;
-        margin: 0 100px;
-        padding: 20px 50px 20px;
-        transition: all 0.3s linear;
-        p, li {
-            color: base.$point-color;
-            margin: 0;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 140%;
-        }
-        ul {
-            padding-left: 0;
-            li {
-                list-style: none;
-            }
-        }
-        
+      margin: 0;
+      padding: 20px;
+      p,
+      li {
+        font-size: 12px;
+      }
     }
-    @media (max-width: 768px) {
-        &__container {
-            margin: 24px 0 0;
-            padding: 0 10px;
-            h2 {
-                font-size: 12px;
-            }
-            img {
-                width: 15px;
-            }
-        }
-        &__content {
-            margin: 0;
-            padding: 0 20px;
-        }
-        &__opened {
-            margin: 0;
-            padding: 20px;
-            p {
-                font-size: 12px;
-            }
-        }
-    }
+  }
 }
-

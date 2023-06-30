@@ -4,14 +4,14 @@ import ThumbCards from './ThumbCards'
 
 export default function Gallery() {
   const [logements, setLogements] = useState([])
-  useEffect(getLogement, [])
 
-  function getLogement() {
+  useEffect(() => {
     fetch('logementData.json')
       .then((response) => response.json())
       .then((data) => setLogements(data))
       .catch((error) => console.error(error))
-  }
+  }, [])
+
   return (
     <section className={styles.gallery}>
       <div className={styles.gallery__container}>

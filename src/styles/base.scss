@@ -24,6 +24,9 @@ html {
 .home__container,
 .propos__container {
   padding: 10px 100px 50px;
+  &--collapse {
+    margin: 30px 100px 0;
+  }
   @media (max-width: 768px) {
     padding: 16px;
     margin-bottom: 170px;

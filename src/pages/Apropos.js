@@ -13,9 +13,11 @@ export default function Apropos() {
         </div>
       </Banner>
       {CollapseData.map(({ index, value, content }) => (
-        <Collapse key={`${value}-${index}`} value={value}>
-          <p>{content}</p>
-        </Collapse>
+        <div key={`${value}-${index}`} className="propos__container--collapse">
+          <Collapse value={value}>
+            <p>{content}</p>
+          </Collapse>
+        </div>
       ))}
     </div>
   )

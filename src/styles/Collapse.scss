@@ -9,7 +9,6 @@
     align-items: center;
     border-radius: 5px;
     padding: 0 20px;
-    margin: 30px 100px 0;
     h2 {
       font-size: 24px;
       font-weight: 500;
@@ -29,7 +28,6 @@
     overflow: hidden;
     background-color: base.$background-color;
     border-radius: 5px;
-    margin: 0 100px;
     padding: 0 50px;
     transition: all 0.3s linear;
     p,
@@ -40,7 +38,6 @@
   &__opened {
     background-color: base.$background-color;
     border-radius: 5px;
-    margin: 0 100px;
     padding: 20px 50px 20px;
     transition: all 0.3s linear;
     p,
@@ -58,16 +55,10 @@
       }
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     &__container {
       margin: 32px 0 0;
-      padding: 0 10px;
-      h2 {
-        font-size: 12px;
-      }
-      img {
-        width: 15px;
-      }
+      padding: 0 20px;
     }
     &__content {
       margin: 0;
@@ -76,6 +67,19 @@
     &__opened {
       margin: 0;
       padding: 20px;
+    }
+  }
+  @media (max-width: 768px) {
+    &__container {
+      padding: 0 10px;
+      h2 {
+        font-size: 12px;
+      }
+      img {
+        width: 15px;
+      }
+    }
+    &__opened {
       p,
       li {
         font-size: 12px;

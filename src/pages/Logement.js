@@ -40,10 +40,10 @@ export default function Logement() {
         hostPic={logements.host ? logements.host.picture : ''}
       />
       <div className={styles.collapse}>
-        <Collapse value="Description">
+        <Collapse value="Description" className={styles.custom}>
           <p>{logements.description}</p>
         </Collapse>
-        <Collapse value="Équipements">
+        <Collapse value="Équipements" className={styles.custom}>
           <ul>
             {logements.equipments
               ? logements.equipments.map((equipment) => (

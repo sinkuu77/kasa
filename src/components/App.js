@@ -1,6 +1,6 @@
 import Header from './Header'
 import Footer from './Footer'
-import { Route, Routes } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import '../styles/base.scss'
 import Home from '../pages/Home'
 import Apropos from '../pages/Apropos'

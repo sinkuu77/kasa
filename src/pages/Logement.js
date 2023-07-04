@@ -28,7 +28,7 @@ export default function Logement() {
     <div className={styles.logement__container}>
       <Carrousel
         pictures={logements.pictures}
-        totalSlide={logements.pictures ? logements.pictures.length : ''}
+        totalSlide={logements.pictures ? logements.pictures.length : null}
       />
       <LogementContents
         id={logements.id}
@@ -36,8 +36,8 @@ export default function Logement() {
         location={logements.location}
         tags={logements.tags}
         rating={logements.rating}
-        hostName={logements.host ? logements.host.name : ''}
-        hostPic={logements.host ? logements.host.picture : ''}
+        hostName={logements.host ? logements.host.name : null}
+        hostPic={logements.host ? logements.host.picture : null}
       />
       <div className={styles.collapse}>
         <Collapse value="Description" className={styles.custom}>
@@ -49,7 +49,7 @@ export default function Logement() {
               ? logements.equipments.map((equipment) => (
                   <li key={`${equipment}-${id}`}>{equipment}</li>
                 ))
-              : ''}
+              : null}
           </ul>
         </Collapse>
       </div>

@@ -49,9 +49,7 @@ export default function Carrousel({ pictures, totalSlide }) {
           />
           <p>{`${currentSlide + 1}/${totalSlide}`}</p>
         </div>
-      ) : (
-        ''
-      )}
+      ) : null}
     </div>
   )
 }

@@ -15,7 +15,7 @@ export default function Collapse({ index, value, children }) {
         <img
           src={icon}
           alt="arrow icon"
-          className={rotate ? 'active' : ''}
+          className={rotate ? 'active' : null}
           onClick={onRotate}
         />
       </div>

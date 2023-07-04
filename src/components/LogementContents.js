@@ -54,7 +54,7 @@ export default function LogementContents({
                     alt="active star"
                   />
                 ))
-              : ''}
+              : null}
             {rating
               ? [...Array(5 - ratingToNumber)].map((star, index) => (
                   <img
@@ -63,7 +63,7 @@ export default function LogementContents({
                     alt="inactive star"
                   />
                 ))
-              : ''}
+              : null}
           </div>
         </div>
       </div>

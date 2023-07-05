@@ -30,5 +30,8 @@ html {
   @media (max-width: 768px) {
     padding: 16px;
     margin-bottom: 170px;
+    &--collapse {
+      margin: 0;
+    }
   }
 }

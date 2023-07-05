@@ -1,6 +1,7 @@
 import '../styles/LogementContents.scss'
 import starActive from '../assets/star-active 1.png'
 import starInactive from '../assets/star-inactive 1.png'
+import Tags from './Tags'
 
 export default function LogementContents({
   id,
@@ -21,10 +22,8 @@ export default function LogementContents({
         <h2 className="contents__container--location">{`${locationTxt[1]}, ${locationTxt[0]}`}</h2>
         <ul className="contents__container--tag">
           {tags
-            ? tags.map((tag) => (
-                <li className="contents__tag--list" key={`${tag}-${id}`}>
-                  {tag}
-                </li>
+            ? tags.map((tag, index) => (
+                <Tags tags={tag} key={`${tag}-${index}`} />
               ))
             : ''}
         </ul>

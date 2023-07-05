@@ -6,7 +6,7 @@ import Collapse from '../components/Collapse'
 import styles from '../styles/Logement.module.scss'
 
 export default function Logement() {
-  const [logements, setLogements] = useState([])
+  const [logement, setLogement] = useState()
   const { id } = useParams()
   const navigate = useNavigate()
 
@@ -16,7 +16,7 @@ export default function Logement() {
       .then((data) => {
         const logement = data.find((item) => String(item.id) === id)
         if (logement) {
-          setLogements(logement)
+          setLogement(logement)
         } else {
           navigate('/logement-non-trouver')
         }
@@ -25,34 +25,38 @@ export default function Logement() {
   }, [id, navigate])
 
   return (
-    <div className={styles.logement__container}>
-      <Carrousel
-        pictures={logements.pictures}
-        totalSlide={logements.pictures ? logements.pictures.length : null}
-      />
-      <LogementContents
-        id={logements.id}
-        title={logements.title}
-        location={logements.location}
-        tags={logements.tags}
-        rating={logements.rating}
-        hostName={logements.host ? logements.host.name : null}
-        hostPic={logements.host ? logements.host.picture : null}
-      />
-      <div className={styles.collapse}>
-        <Collapse value="Description" className={styles.custom}>
-          <p>{logements.description}</p>
-        </Collapse>
-        <Collapse value="Équipements" className={styles.custom}>
-          <ul>
-            {logements.equipments
-              ? logements.equipments.map((equipment) => (
-                  <li key={`${equipment}-${id}`}>{equipment}</li>
-                ))
-              : null}
-          </ul>
-        </Collapse>
-      </div>
-    </div>
+    <>
+      {logement && (
+        <div className={styles.logement__container}>
+          <Carrousel
+            pictures={logement.pictures}
+            totalSlide={logement.pictures ? logement.pictures.length : null}
+          />
+          <LogementContents
+            id={logement.id}
+            title={logement.title}
+            location={logement.location}
+            tags={logement.tags}
+            rating={logement.rating}
+            hostName={logement.host ? logement.host.name : null}
+            hostPic={logement.host ? logement.host.picture : null}
+          />
+          <div className={styles.collapse}>
+            <Collapse value="Description" className={styles.custom}>
+              <p>{logement.description}</p>
+            </Collapse>
+            <Collapse value="Équipements" className={styles.custom}>
+              <ul>
+                {logement.equipments
+                  ? logement.equipments.map((equipment) => (
+                      <li key={`${equipment}-${id}`}>{equipment}</li>
+                    ))
+                  : null}
+              </ul>
+            </Collapse>
+          </div>
+        </div>
+      )}
+    </>
   )
 }

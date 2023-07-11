@@ -10,11 +10,9 @@ export default function Home() {
         <div className={styles.home__banner}>
           <img src={BannerImg} alt="mountain" />
         </div>
-        <h1>Chez vous, partout et ailleurs</h1>
-        <p>
-          Chez vous,
-          <br /> partout et ailleurs
-        </p>
+        <h1>
+          Chez vous, <span>partout et ailleurs</span>
+        </h1>
       </Banner>
       <Gallery />
     </div>

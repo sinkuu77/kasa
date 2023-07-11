@@ -1,6 +1,6 @@
 import logo from '../assets/LOGO-navbar.png'
 import styles from '../styles/Header.module.scss'
-import { Link, useMatch, useResolvedPath } from 'react-router-dom'
+import ClikedLink from './ClickedLink'
 
 export default function Header() {
   return (
@@ -13,17 +13,5 @@ export default function Header() {
         </ul>
       </nav>
     </header>
-  )
-}
-
-function ClikedLink({ to, children, ...props }) {
-  const resolvedPath = useResolvedPath(to)
-  const isActive = useMatch({ path: resolvedPath.pathname, end: true })
-  return (
-    <li className={isActive ? styles.active : null}>
-      <Link to={to} {...props}>
-        {children}
-      </Link>
-    </li>
   )
 }

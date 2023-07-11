@@ -4,7 +4,6 @@ import starInactive from '../assets/star-inactive 1.png'
 import Tags from './Tags'
 
 export default function LogementContents({
-  id,
   title,
   location,
   tags,

@@ -37,23 +37,14 @@
   }
   @media (max-width: 768px) {
     div {
-      h1,
-      p {
+      h1 {
         font-size: 24px;
         text-align: start;
         top: 40%;
         padding-left: 16px;
       }
-    }
-  }
-  @media (max-width: 400px) {
-    div {
-      h1 {
-        display: none;
-      }
-      p {
+      span {
         display: block;
-        top: 35%;
       }
     }
   }

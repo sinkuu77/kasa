@@ -7,7 +7,9 @@
 * **Pour exécuter ce projet**
 <p>Cloner le repo en local</p>
 
-```
+```bash
+npm install
+
 npm run start
 ```
   

@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Kasa (un site de la location d’appartements entre particuliers)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p>J'ai créé un site en responsive en utilisant les composants React, les routes React Router, dans le cadre du huitième projet de ma formation en tant qu'intégrateur web chez OpenClassrooms.</p>
+<p>  👇 </p>
+<a href=></a>
 
-## Available Scripts
+* **Pour exécuter ce projet**
+<p>Cloner le repo en local</p>
 
-In the project directory, you can run:
+```bash
+npm install
 
-### `npm start`
+npm run start
+```
+  
+## Preview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Projet 8 - Créez une application web de location immobilière avec React (OpenClassrooms)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img src="https://i.ibb.co/tY9v1k0/3.png" />
 
-### `npm test`
+## le délai de production du site
+14.06.23 - 11.07.23
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Stack utilisé
+React, Sass
 
-### `npm run build`
+## Point
+<p>J'ai appris comment créer une application de manière efficace en produisant des composants réutilisables. </p>
+<p>De plus, pour la première fois, j'ai pris en compte l'expérience utilisateur en utilisant React Router.</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Problème en réalisant ce projet
+<p>Lorsque j'utilisais React, je rencontrais fréquemment des difficultés à gérer les erreurs 'Cannot read properties of undefined'. </p>
+<p>J'ai découvert la cause de ces erreurs grâce à un article de blog, qui expliquait que l'erreur se produit lorsque l'on essaie d'accéder à une valeur non définie, comme un tableau qui n'a pas été initialisé ou qui n'a pas encore reçu de données. </p>
+<p>Par exemple, lorsqu'on récupère des éléments de tâches à partir des données de JSON Placeholder, il arrive que la méthode map soit appelée avant que les données de la requête API ne soient disponibles. </p>
+<p>Depuis lors, je veille à utiliser des opérateurs de comparaison pour prévenir la réapparition de ce même problème.</p>

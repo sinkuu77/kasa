@@ -17,7 +17,7 @@ npm run start
 
 Projet 8 - Créez une application web de location immobilière avec React (OpenClassrooms)
 
-<img src="https://i.ibb.co/y529J7P/kasa.webp" />
+<img src="https://i.ibb.co/tY9v1k0/3.png" />
 
 ## le délai de production du site
 14.06.23 - 11.07.23
